@@ -1,1 +1,182 @@
+/* ===========================
+   Graduate Tailors
+   Since 1991
+=========================== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0d0d0d;
+color:#fff;
+line-height:1.6;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#111;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid gold;
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:gold;
+}
+
+.logo span{
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:17px;
+transition:.3s;
+}
+
+nav a:hover{
+color:gold;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:65px;
+color:gold;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:gold;
+color:#111;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn:hover{
+background:white;
+transform:scale(1.05);
+}
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:gold;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#181818;
+padding:25px;
+border-radius:12px;
+border:1px solid #333;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:gold;
+}
+
+.card h3{
+color:gold;
+margin-bottom:15px;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+margin-top:15px;
+color:#00ff99;
+}
+
+footer{
+background:#111;
+padding:30px;
+text-align:center;
+border-top:2px solid gold;
+}
+
+footer h3{
+color:gold;
+margin-bottom:10px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+nav{
+display:none;
+}
+
+}
