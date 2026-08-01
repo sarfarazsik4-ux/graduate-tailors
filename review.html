@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Reviews | Graduate Tailors</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.review-page{
+    padding:40px 20px;
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.review-card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.review-card h3{
+    color:#222;
+}
+
+.stars{
+    color:#FFD700;
+    font-size:22px;
+    margin:10px 0;
+}
+
+.review-card p{
+    color:#555;
+    line-height:1.6;
+}
+
+.review-form{
+    margin-top:50px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.review-form input,
+.review-form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.review-form button{
+    background:#FFD000;
+    color:#000;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">Graduate <span>Tailors</span></div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="order.html">Order</a>
+<a href="review.html">Reviews</a>
+</nav>
+
+</header>
+
+<section class="review-page">
+
+<h1>Customer Reviews ⭐</h1>
+
+<div class="review-grid">
+
+<div class="review-card">
+<h3>Rahul Sharma</h3>
+<div class="stars">★★★★★</div>
+<p>Perfect fitting and premium stitching. Highly recommended.</p>
+</div>
+
+<div class="review-card">
+<h3>Amit Kumar</h3>
+<div class="stars">★★★★★</div>
+<p>Suit delivery was on time. Fabric quality is excellent.</p>
+</div>
+
+<div class="review-card">
+<h3>Mohit Singh</h3>
+<div class="stars">★★★★☆</div>
+<p>Very professional tailor. Loved the finishing.</p>
+</div>
+
+</div>
+
+<div class="review-form">
+
+<h2>Write Your Review</h2>
+<div id="reviewsList"></div>
+<input type="text" placeholder="Your Name">
+
+<textarea rows="5" placeholder="Write your review"></textarea>
+
+<button onclick="submitReview()">Submit Review</button>
+
+<div id="successMessage" style="display:none; margin-top:20px; color:green; font-weight:bold;">
+⭐⭐⭐⭐⭐ Thank you for your review!
+</div>
+
+</div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>
