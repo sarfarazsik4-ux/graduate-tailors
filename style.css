@@ -423,5 +423,45 @@ box-shadow:0 0 30px rgba(255,215,0,.4);
 color:gold;
 
 font-weight:bold;
+.floating-whatsapp{
 
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:35px;
+
+text-decoration:none;
+
+color:white;
+
+box-shadow:0 0 20px rgba(0,0,0,.4);
+
+z-index:9999;
+
+transition:.3s;
+
+}
+
+.floating-whatsapp:hover{
+
+transform:scale(1.1);
+
+}
 }
