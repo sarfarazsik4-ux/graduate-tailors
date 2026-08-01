@@ -161,6 +161,25 @@ localStorage.setItem("graduateOrder", JSON.stringify(order));
 window.location.href = "review.html";
 
 }
+<script>
+function saveOrder() {
+
+    const order = {
+        name: document.getElementById("customerName").value,
+        phone: document.getElementById("customerPhone").value,
+        email: document.getElementById("customerEmail").value,
+        product: document.getElementById("product").value,
+        fabric: document.getElementById("fabric").value,
+        fit: document.getElementById("fit").value,
+        size: document.getElementById("size").value,
+        shirtColor: document.getElementById("shirtColor").value,
+        pantColor: document.getElementById("pantColor").value
+    };
+
+    localStorage.setItem("graduateOrder", JSON.stringify(order));
+
+    window.location.href = "review.html";
+}
 </script>
 </body>
 </html>
