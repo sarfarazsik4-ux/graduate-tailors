@@ -72,7 +72,25 @@
 </style>
 
 </head>
+<script>
 
+const order = JSON.parse(localStorage.getItem("graduateOrder"));
+
+if(order){
+
+document.getElementById("customerName").innerText = order.name;
+document.getElementById("customerPhone").innerText = order.phone;
+document.getElementById("customerEmail").innerText = order.email;
+document.getElementById("product").innerText = order.product;
+document.getElementById("fabric").innerText = order.fabric;
+document.getElementById("fit").innerText = order.fit;
+document.getElementById("size").innerText = order.size;
+document.getElementById("shirtColor").style.background = order.shirtColor;
+document.getElementById("pantColor").style.background = order.pantColor;
+
+}
+
+</script>
 <body>
 
 <header>
