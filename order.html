@@ -10,35 +10,31 @@
 <body>
 
 <header>
-<div class="logo">Graduate <span>Tailors</span></div>
+    <div class="logo">Graduate <span>Tailors</span></div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="order.html">Order</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="order.html">Order</a>
+        <a href="review.html">Reviews</a>
+    </nav>
 </header>
 
 <section style="padding-top:120px">
 
 <h2 class="title">Design Your Outfit</h2>
+
 <div class="card">
 
 <h2>Customer Details</h2>
 
 <input type="text" id="customerName" placeholder="Full Name">
-
 <br><br>
 
 <input type="tel" id="customerPhone" placeholder="Mobile Number">
-
 <br><br>
 
 <input type="email" id="customerEmail" placeholder="Email (Optional)">
-
-</div>
-
-<br>
-<div class="card">
+<br><br>
 
 <label><b>Select Product</b></label>
 
@@ -54,18 +50,6 @@
 <label><b>Select Fabric</b></label>
 
 <select id="fabric">
-<label><b>Select Fit</b></label>
-
-<select id="fit">
-
-<option>Regular Fit</option>
-<option>Slim Fit</option>
-<option>Comfort Fit</option>
-<option>Classic Fit</option>
-
-</select>
-
-<br><br>
 <option>Pure Cotton</option>
 <option>Egyptian Cotton</option>
 <option>Linen</option>
@@ -81,9 +65,17 @@
 <option>Viscose</option>
 <option>Wool</option>
 <option>Silk Blend</option>
-
 </select>
 
+<br><br>
+
+<label><b>Select Fit</b></label>
+
+<select id="fit">
+<option>Regular Fit</option>
+<option>Slim Fit</option>
+<option>Comfort Fit</option>
+<option>Classic Fit</option>
 </select>
 
 <br><br>
@@ -103,28 +95,31 @@
 <label><b>Select Size</b></label>
 
 <select id="size">
-
 <option>S</option>
 <option>M</option>
 <option>L</option>
 <option>XL</option>
 <option>XXL</option>
-
 </select>
 
 <br><br>
 
 <h3>OR Manual Measurements</h3>
 
-<input type="number" placeholder="Chest (inches)"><br><br>
+<input type="number" placeholder="Chest (inches)">
+<br><br>
 
-<input type="number" placeholder="Waist (inches)"><br><br>
+<input type="number" placeholder="Waist (inches)">
+<br><br>
 
-<input type="number" placeholder="Shoulder (inches)"><br><br>
+<input type="number" placeholder="Shoulder (inches)">
+<br><br>
 
-<input type="number" placeholder="Sleeve Length"><br><br>
+<input type="number" placeholder="Sleeve Length">
+<br><br>
 
-<input type="number" placeholder="Pant Length"><br><br>
+<input type="number" placeholder="Pant Length">
+<br><br>
 
 <button class="btn" onclick="reviewOrder()">
 Review Order
@@ -135,51 +130,31 @@ Review Order
 </section>
 
 <footer>
-
 <h3>Graduate Tailors</h3>
-
 <p>Since 1991</p>
-
 </footer>
-<script>
-function reviewOrder() {
 
-const order = {
-name: document.getElementById("customerName").value,
-phone: document.getElementById("customerPhone").value,
-email: document.getElementById("customerEmail").value,
-product: document.getElementById("product").value,
-fabric: document.getElementById("fabric").value,
-fit: document.getElementById("fit").value,
-size: document.getElementById("size").value,
-shirtColor: document.getElementById("shirtColor").value,
-pantColor: document.getElementById("pantColor").value
+<script>
+function reviewOrder(){
+
+const order={
+name:document.getElementById("customerName").value,
+phone:document.getElementById("customerPhone").value,
+email:document.getElementById("customerEmail").value,
+product:document.getElementById("product").value,
+fabric:document.getElementById("fabric").value,
+fit:document.getElementById("fit").value,
+size:document.getElementById("size").value,
+shirtColor:document.getElementById("shirtColor").value,
+pantColor:document.getElementById("pantColor").value
 };
 
-localStorage.setItem("graduateOrder", JSON.stringify(order));
+localStorage.setItem("graduateOrder",JSON.stringify(order));
 
-window.location.href = "review.html";
+window.location.href="review.html";
 
-}
-<script>
-function saveOrder() {
-
-    const order = {
-        name: document.getElementById("customerName").value,
-        phone: document.getElementById("customerPhone").value,
-        email: document.getElementById("customerEmail").value,
-        product: document.getElementById("product").value,
-        fabric: document.getElementById("fabric").value,
-        fit: document.getElementById("fit").value,
-        size: document.getElementById("size").value,
-        shirtColor: document.getElementById("shirtColor").value,
-        pantColor: document.getElementById("pantColor").value
-    };
-
-    localStorage.setItem("graduateOrder", JSON.stringify(order));
-
-    window.location.href = "review.html";
 }
 </script>
+
 </body>
 </html>
